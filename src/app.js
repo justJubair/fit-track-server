@@ -3,8 +3,18 @@ const applyMiddleware = require('./middlewares/applyMiddleware')
 const app = express();
 
 
+// Routes
+const serviceRoutes = require("./routes/services/index")
+
 // usage of apply middleware
 applyMiddleware(app)
+
+// use services routes
+app.use(serviceRoutes)
+
+
+
+
 
 
 // servers default route setup
