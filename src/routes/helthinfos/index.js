@@ -1,6 +1,6 @@
 // healthInfoRoutes.js
 const express = require("express");
-const postHealthInfo = require("../../api/services/postHealthInfo");
+const postHealthInfo = require("../../api/helthinfo/postHealthInfo");
 
 const router = express.Router();
 
