@@ -1,14 +1,16 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const ServiceSchema = new Schema({
+const HealthInfoSchema = new Schema({
   email: String,
   fitnessLevel: String,
   height: Number,
   username: String,
   weight: Number,
-});
+  age: Number,
+}, { versionKey: false }); // Disable versioning
 
-const Services = mongoose.model("HealthInfos", HealthInfoSchema);
+const HealthInfo = mongoose.model("HealthInfo", HealthInfoSchema);
 
-module.exports = HealthInfos;
+module.exports = HealthInfo;
+
