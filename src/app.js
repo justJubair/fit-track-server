@@ -5,12 +5,15 @@ const app = express();
 
 // Routes
 const serviceRoutes = require("./routes/services/index")
-
+const healthinfoRoutes = require("./routes/helthinfos/index")
+const dietPlanRoutes= require("./routes/dietplan/index")
 // usage of apply middleware
 applyMiddleware(app)
 
 // use services routes
 app.use(serviceRoutes)
+app.use(healthinfoRoutes)
+app.use(dietPlanRoutes);
 
 
 
