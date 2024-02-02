@@ -9,7 +9,7 @@ const BlogSchema = new Schema({
   userName: String,
   userImageURL: String,
   likes: [ String ],
-  disLikes: Array,
+  disLikes: [ String ],
 });
 
 const Blogs = mongoose.model("Blogs", BlogSchema);
