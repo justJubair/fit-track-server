@@ -7,7 +7,7 @@ const patchDisLikes = async (req, res) => {
     const blog = await Blogs.findOne({ _id: blogId, disLikes: DislikerEmail });
     if (blog) {
       // If DislikerEmail already exists, return without updating
-      return res.status(400).send("User already liked this blog.");
+      return res.status(200).send("User already liked this blog.");
     }
     // If likerEmail doesn't exist, update the likes array
     const result = await Blogs.updateOne(
