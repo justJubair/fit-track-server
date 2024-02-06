@@ -10,6 +10,7 @@ const BlogSchema = new Schema({
   userImageURL: String,
   likes: [ String ],
   disLikes: [ String ],
+  comments: [ Object ],
 });
 
 const Blogs = mongoose.model("Blogs", BlogSchema);
