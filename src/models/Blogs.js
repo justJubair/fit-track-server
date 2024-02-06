@@ -8,9 +8,9 @@ const BlogSchema = new Schema({
   time: String,
   userName: String,
   userImageURL: String,
-  likes: [ String ],
-  disLikes: [ String ],
-  comments: [ Object ],
+  likes: [String],
+  disLikes: [String],
+  blogComments: [Object],
 });
 
 const Blogs = mongoose.model("Blogs", BlogSchema);
