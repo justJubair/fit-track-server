@@ -8,6 +8,7 @@ const healthinfoRoutes = require("./routes/helthinfos/index")
 const dietPlanRoutes= require("./routes/dietplan/index")
 const BlogsRoutes = require("./routes/blogs/index");
 const challengesRoutes = require("./routes/challenges/index");
+const emailApi = require('./routes/sendEmail/index');
 
 // usage of apply middleware
 applyMiddleware(app);
@@ -25,6 +26,7 @@ app.use(dietPlanRoutes);
 //use Blogs routs
 app.use(BlogsRoutes);
 app.use(challengesRoutes)
+app.use(emailApi)
 
 // servers default route setup
 app.get("/health", (req, res) => {
