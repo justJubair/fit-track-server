@@ -2,8 +2,6 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 const emailS = process.env.siteemail;
 const passS = process.env.emailpass;
-console.log(emailS)
-
 function sendEmail({ email, subject, message }) {
   return new Promise((resolve, reject) => {
     var transporter = nodemailer.createTransport({
