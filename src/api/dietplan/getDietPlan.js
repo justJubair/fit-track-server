@@ -3,10 +3,7 @@ const express = require("express");
 const HealthInfo = require("../../models/HealthInfos"); // Adjust the import
 const DietPlan = require("../../models/DietPlan"); // Adjust the import
 
-const router = express.Router();
-
-// GET diet plan based on user's email
-router.get("/api/v1/dietplan/:email", async (req, res) => {
+const getDietPlan = async (req, res) => {
   const userEmail = req.params.email;
 
   try {
@@ -41,6 +38,6 @@ router.get("/api/v1/dietplan/:email", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-});
+};
 
-module.exports = router;
+module.exports = getDietPlan;
