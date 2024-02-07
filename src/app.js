@@ -3,30 +3,31 @@ const applyMiddleware = require("./middlewares/applyMiddleware");
 const app = express();
 
 // Routes
-const serviceRoutes = require("./routes/services/index")
-const healthinfoRoutes = require("./routes/helthinfos/index")
-const dietPlanRoutes= require("./routes/dietplan/index")
+const serviceRoutes = require("./routes/services/index");
+const healthinfoRoutes = require("./routes/helthinfos/index");
+const dietPlanRoutes = require("./routes/dietplan/index");
 const BlogsRoutes = require("./routes/blogs/index");
 const challengesRoutes = require("./routes/challenges/index");
-const emailApi = require('./routes/sendEmail/index');
+const emailApi = require("./routes/sendEmail/index");
+const acceptedChallenge = require("./routes/challenges/acceptedChallenge/index");
 
 // usage of apply middleware
 applyMiddleware(app);
 
 // use services routes
-app.use(serviceRoutes)
+app.use(serviceRoutes);
 
 // use health info routes
-app.use(healthinfoRoutes)
+app.use(healthinfoRoutes);
 
 // use diet plan routes
 app.use(dietPlanRoutes);
 
-
 //use Blogs routs
 app.use(BlogsRoutes);
-app.use(challengesRoutes)
-app.use(emailApi)
+app.use(challengesRoutes);
+app.use(acceptedChallenge);
+app.use(emailApi);
 
 // servers default route setup
 app.get("/health", (req, res) => {
