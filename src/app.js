@@ -7,6 +7,7 @@ const serviceRoutes = require("./routes/services/index")
 const healthinfoRoutes = require("./routes/helthinfos/index")
 const dietPlanRoutes= require("./routes/dietplan/index")
 const BlogsRoutes = require("./routes/blogs/index");
+const UserRoutes = require("./routes/users/index")
 
 // usage of apply middleware
 applyMiddleware(app);
@@ -23,6 +24,9 @@ app.use(dietPlanRoutes);
 
 //use Blogs routs
 app.use(BlogsRoutes);
+
+//use User routes
+app.use(UserRoutes);
 
 // servers default route setup
 app.get("/health", (req, res) => {
