@@ -9,6 +9,9 @@ const dietPlanRoutes= require("./routes/dietplan/index")
 const BlogsRoutes = require("./routes/blogs/index");
 const UserRoutes = require("./routes/users/index")
 const TrainerRoutes = require('./routes/trainers/index')
+const challengesRoutes = require("./routes/challenges/index");
+const emailApi = require('./routes/sendEmail/index');
+
 // usage of apply middleware
 applyMiddleware(app);
 
@@ -24,6 +27,8 @@ app.use(dietPlanRoutes);
 
 //use Blogs routs
 app.use(BlogsRoutes);
+app.use(challengesRoutes)
+app.use(emailApi)
 
 //use User routes
 app.use(UserRoutes);
