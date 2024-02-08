@@ -1,4 +1,3 @@
-// dietPlanModel.js
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
@@ -46,8 +45,8 @@ const TrainerSchema = new Schema(
             type: String,
             required: true
           }
-    },
-    { collection: 'trainsers'});
+    }
+    );
 
 const Trainer = mongoose.model("Trainer", TrainerSchema);
 

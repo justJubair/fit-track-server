@@ -1,5 +1,5 @@
-const nodemailer = require("nodemailer");
 require("dotenv").config();
+const nodemailer = require("nodemailer");
 const emailS = process.env.siteemail;
 const passS = process.env.emailpass;
 function sendEmail({ email, subject, message }) {

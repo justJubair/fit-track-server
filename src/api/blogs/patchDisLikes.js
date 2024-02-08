@@ -16,7 +16,7 @@ const patchDisLikes = async (req, res) => {
     );
 
     res.send(result);
-    console.log(result);
+ 
   } catch (error) {
     console.error(error);
     res.status(500).send("Internal Server Error");
