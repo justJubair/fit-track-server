@@ -43,11 +43,11 @@ const TrainerSchema = new Schema(
           },
           profile_image: {
             type: String,
-            required: true
+            
           }
     }
     );
 
-const Trainers = mongoose.model("Trainer", TrainerSchema);
+const Trainers = mongoose.model("Trainers", TrainerSchema);
 
 module.exports = Trainers;
