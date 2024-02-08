@@ -48,6 +48,6 @@ const TrainerSchema = new Schema(
     }
     );
 
-const Trainer = mongoose.model("Trainer", TrainerSchema);
+const Trainers = mongoose.model("Trainer", TrainerSchema);
 
-module.exports = Trainer;
+module.exports = Trainers;

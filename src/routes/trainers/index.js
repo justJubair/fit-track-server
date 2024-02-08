@@ -1,5 +1,5 @@
 const express = require('express');
-const getAllTrainers = require('../../api/trainer/getAllTrainers');
+const getAllTrainers = require('../../api/trainers/getAllTrainers');
 
 const router = express.Router();
 
