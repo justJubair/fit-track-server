@@ -28,14 +28,17 @@ app.use(dietPlanRoutes);
 //use Blogs routs
 app.use(BlogsRoutes);
 app.use(challengesRoutes);
-app.use(acceptedChallenge);
-app.use(emailApi);
 
 //use User routes
 app.use(UserRoutes);
 
 //use Trainer routes
 app.use(TrainerRoutes);
+
+app.use(acceptedChallenge);
+app.use(emailApi);
+
+
 
 // servers default route setup
 app.get("/health", (req, res) => {
