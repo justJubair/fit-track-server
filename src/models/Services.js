@@ -1,23 +1,6 @@
 const mongoose = require("mongoose")
 const {Schema} = mongoose;
 
-<<<<<<< HEAD
-const ServiceSchema = new Schema({
-    heading: String,
-    subheading: String,
-    thumbnail: String,
-    serviceId: String,
-    duration: Number,
-    category: String,
-    numberOfVideos: Number,
-    videos: [
-        {
-           title: String,
-           vlink: String, 
-        }
-    ]
-})
-=======
 const videoSchema = new Schema({
     title: { type: String, required: true },
     duration: { type: String, required: true },
@@ -36,7 +19,6 @@ const videoSchema = new Schema({
     videos: [videoSchema],
   });
   
->>>>>>> f3cd0eb76efc777fb68562d3913cc8df416ab25e
 
 const Services = mongoose.model("Services", ServiceSchema)
 

@@ -1,8 +1,8 @@
 const express = require('express');
-const getAllUser = require('../../api/trainer/getAllTrainers');
+const getAllTrainers = require('../../api/trainer/getAllTrainers');
 
 const router = express.Router();
 
-router.get('/api/v1/trainers', getAllUser)
+router.get('/api/v1/trainers', getAllTrainers)
 
 module.exports = router;
