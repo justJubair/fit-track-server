@@ -7,6 +7,8 @@ const serviceRoutes = require("./routes/services/index");
 const healthinfoRoutes = require("./routes/helthinfos/index");
 const dietPlanRoutes = require("./routes/dietplan/index");
 const BlogsRoutes = require("./routes/blogs/index");
+const UserRoutes = require("./routes/users/index")
+const TrainerRoutes = require('./routes/trainers/index')
 const challengesRoutes = require("./routes/challenges/index");
 const emailApi = require("./routes/sendEmail/index");
 const acceptedChallenge = require("./routes/challenges/acceptedChallenge/index");
@@ -28,6 +30,12 @@ app.use(BlogsRoutes);
 app.use(challengesRoutes);
 app.use(acceptedChallenge);
 app.use(emailApi);
+
+//use User routes
+app.use(UserRoutes);
+
+//use Trainer routes
+app.use(TrainerRoutes);
 
 // servers default route setup
 app.get("/health", (req, res) => {
