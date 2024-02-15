@@ -5,6 +5,7 @@ const patchLikes = require("../../api/blogs/patchLikes");
 const patchDisLikes = require("../../api/blogs/patchDisLikes");
 const getBlog = require("../../api/blogs/getBlog");
 const patchComment = require("../../api/blogs/patchComment");
+const deleteComment = require("../../api/blogs/deleteComment");
 const router = express.Router();
 
 //post Blogs to DB
@@ -14,5 +15,6 @@ router.patch("/api/v1/like", patchLikes);
 router.patch("/api/v1/Dislike", patchDisLikes);
 router.get("/api/v1/blog/:id", getBlog);
 router.patch("/api/v1/comment", patchComment);
+router.patch("/api/v1/comment-delete", deleteComment);
 
 module.exports = router;
