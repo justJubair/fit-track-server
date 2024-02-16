@@ -12,7 +12,7 @@ const TrainerRoutes = require('./routes/trainers/index')
 const challengesRoutes = require("./routes/challenges/index");
 const emailApi = require("./routes/sendEmail/index");
 const acceptedChallenge = require("./routes/challenges/acceptedChallenge/index");
-
+const paymentRoute = require('./routes/payment/index');
 // usage of apply middleware
 applyMiddleware(app);
 
@@ -31,6 +31,9 @@ app.use(challengesRoutes);
 
 //use User routes
 app.use(UserRoutes);
+
+//payment route
+app.use(paymentRoute);
 
 //use Trainer routes
 app.use(TrainerRoutes);

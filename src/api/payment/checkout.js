@@ -6,9 +6,11 @@ const checkout = async(req, res) => {
      
     const amount = parseInt(price * 100);
 
+    // console.log(price, amount)
+
     try {
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: amount,
+            amount: 200,
             currency: 'usd',
             payment_method_types: ['card']
         });
