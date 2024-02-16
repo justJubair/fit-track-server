@@ -13,6 +13,9 @@ const challengesRoutes = require("./routes/challenges/index");
 const emailApi = require("./routes/sendEmail/index");
 const acceptedChallenge = require("./routes/challenges/acceptedChallenge/index");
 
+// require payment routes
+const paymentRoutes = require("./routes/payment/index")
+
 // usage of apply middleware
 applyMiddleware(app);
 
@@ -36,7 +39,11 @@ app.use(UserRoutes);
 app.use(TrainerRoutes);
 
 app.use(acceptedChallenge);
+
 app.use(emailApi);
+
+// use payment routes
+app.use(paymentRoutes)
 
 
 
