@@ -23,6 +23,21 @@ const userSchema = new Schema({
     ],
   },
   saved_blogs: [String],
+  friendList: [
+    {
+      targetId: String,
+      userEmail: String,
+      userName: String,
+      requestStatus: {
+          type: String,
+          default: 'pending'
+      },
+      seenStatus: {
+          type: Boolean,
+          default: false
+      }
+  }
+  ]
 });
 
 const User = mongoose.model("User", userSchema);

@@ -36,6 +36,9 @@ app.use(challengesRoutes);
 //use User routes
 app.use(UserRoutes);
 
+//payment route
+app.use(paymentRoute);
+
 //use Trainer routes
 app.use(TrainerRoutes);
 
