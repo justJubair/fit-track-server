@@ -12,7 +12,7 @@ const TrainerRoutes = require('./routes/trainers/index')
 const challengesRoutes = require("./routes/challenges/index");
 const emailApi = require("./routes/sendEmail/index");
 const acceptedChallenge = require("./routes/challenges/acceptedChallenge/index");
-const paymentRoute = require('./routes/payment/index');
+// const WebRTC = require("./WebRTC/index")
 
 // require payment routes
 const paymentRoutes = require("./routes/payment/index")
@@ -49,7 +49,7 @@ app.use(emailApi);
 // use payment routes
 app.use(paymentRoutes)
 
-
+// app.use(WebRTC)
 
 // servers default route setup
 app.get("/health", (req, res) => {
