@@ -13,6 +13,7 @@ const challengesRoutes = require("./routes/challenges/index");
 const emailApi = require("./routes/sendEmail/index");
 const acceptedChallenge = require("./routes/challenges/acceptedChallenge/index");
 // const WebRTC = require("./WebRTC/index")
+const paymentRoute = require('./routes/payment/index');
 
 // require payment routes
 const paymentRoutes = require("./routes/payment/index")
