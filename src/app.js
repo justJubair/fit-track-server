@@ -12,6 +12,7 @@ const TrainerRoutes = require('./routes/trainers/index')
 const challengesRoutes = require("./routes/challenges/index");
 const emailApi = require("./routes/sendEmail/index");
 const acceptedChallenge = require("./routes/challenges/acceptedChallenge/index");
+const paymentRoute = require('./routes/payment/index');
 
 // require payment routes
 const paymentRoutes = require("./routes/payment/index")
@@ -34,6 +35,9 @@ app.use(challengesRoutes);
 
 //use User routes
 app.use(UserRoutes);
+
+//payment route
+app.use(paymentRoute);
 
 //use Trainer routes
 app.use(TrainerRoutes);
