@@ -2,8 +2,7 @@ const Blogs = require("../../models/Blogs");
 const patchComment = async (req, res) => {
   try {
     const { blogId, comment } = req.body;
-    console.log(blogId);
-    // console.log(req.body);
+
 
     const result = await Blogs.updateOne(
       { _id: blogId },

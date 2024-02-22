@@ -10,7 +10,7 @@ const patchDisLikes = async (req, res) => {
       return res.status(200).send("User already liked this blog.");
     }
     // If likerEmail doesn't exist, update the likes array
-    console.log({ blogId });
+ 
     const result = await Blogs.updateOne(
       { _id: blogId },
       { $addToSet: { disLikes: DislikerEmail } }
