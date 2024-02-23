@@ -18,7 +18,7 @@ const main = async () => {
     console.log(`Socket connection: ${socket.id}`);
     socket.on("room:join", (data) => {
       const { email, room } = data;
-      console.log(data);
+     
       emailToSocketIdMap.set(email, socket.id);
       socketIdToEmailMap.set(socket.id, email);
       io.to(room).emit("user:joined", { email, id: socket.id });
