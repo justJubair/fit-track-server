@@ -15,6 +15,9 @@ const userSchema = new Schema({
   userImage: {
     type: String, // You might want to store the image URL or a reference here
   },
+  role:{
+    type: String
+  },
   watchHistory: {
     type: [
       {
@@ -28,6 +31,7 @@ const userSchema = new Schema({
       targetId: String,
       userEmail: String,
       userName: String,
+      userImage: String,
       requestStatus: {
           type: String,
           default: 'pending'
