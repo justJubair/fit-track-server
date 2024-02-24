@@ -3,7 +3,8 @@ const User = require('../../models/User')
 const updateWatchHistory = async (req, res) => {
     try {
         const newvideo = req.body;
-
+        console.log(newvideo)
+        
         const newVideoId = newvideo.vidId;
 
         const findUser = await User.findOne({ email: newvideo.userEmail });
@@ -15,7 +16,7 @@ const updateWatchHistory = async (req, res) => {
 
         //checking if the video id already in user's watch history
         const isVideoAlreadyWatched = findUser.watchHistory.some(vId => vId.videoId === newVideoId)
-
+      console.log(isVideoAlreadyWatched)
         if (isVideoAlreadyWatched) {
             return res.status(400).send('Video is already exist in watch history')
         }

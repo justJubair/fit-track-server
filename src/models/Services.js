@@ -2,21 +2,31 @@ const mongoose = require("mongoose")
 const {Schema} = mongoose;
 
 const videoSchema = new Schema({
-    title: { type: String, required: true },
-    duration: { type: String, required: true },
-    vlink: { type: String, required: true },
+    title: { type: String,},
+    duration: { type: String,},
+    vlink: { type: String,},
   });
   
   const ServiceSchema = new Schema({
-    id: { type: Number, required: true },
-    heading: { type: String, required: true },
-    subheading: { type: String, required: true },
-    thumbnail: { type: String, required: true },
-    serviceId: { type: String, required: true },
-    duration: { type: Number, required: true },
-    category: { type: String, required: true },
-    numberOfVideos: { type: Number, required: true },
+    id: { type: Number },
+    heading: { type: String },
+    subheading: { type: String },
+    thumbnail: { type: String },
+    serviceId: { type: String },
+    duration: { type: Number },
+    category: { type: String },
+    numberOfVideos: { type: Number },
     videos: [videoSchema],
+    reviews: [
+      {
+        serviceId: String,
+        email: String,
+        userImage: String,
+        rating: Number,
+        comment: String,
+        date: { type: Date, default: Date.now },
+    }
+    ]
   });
   
 
