@@ -11,9 +11,8 @@ const postDataInUserFriendList = async (req, res) => {
             return res.status(404).send('User not found');
         }
 
-        // Assuming 'userDetails' contains an 'email' field to check uniqueness
-        // Adjust this condition based on the structure of  'userDetails' and 'friendList't
-        const alreadyInFriendList = user.friendList.some(friend => friend.email == userDetails.email)
+        // Checking if user already in friendlist
+        const alreadyInFriendList = user.friendList.some(friend => friend.userEmail == userDetails.userEmail);
 
         if (alreadyInFriendList) {
             return res.status(409).send('User already in friend list'); // HTTP 409 Conflict
