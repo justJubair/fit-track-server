@@ -4,11 +4,12 @@ const app = require("./src/app");
 const connectDB = require("./src/db/connectDB");
 const server = http.createServer(app);
 const port = process.env.PORT || 5000;
+const webRTCPort = process.env.PORT || 8000;
 const { Server } = require("socket.io");
 const main = async () => {
   await connectDB();
 
-  const io = new Server(8000, {
+  const io = new Server(webRTCPort, {
     cors: true,
   });
 
