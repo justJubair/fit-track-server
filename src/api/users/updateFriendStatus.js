@@ -12,7 +12,7 @@ const updateFriendStatus = async (req, res) => {
       { $set: { "friendList.$.requestStatus": data?.requestStatus, "friendList.$.seenStatus": true} },
       { new: true }
     );
-    
+    console.log(result)
   }
 };
 

@@ -28,6 +28,7 @@ const userSchema = new Schema({
       targetId: String,
       userEmail: String,
       userName: String,
+      userImage: String,
       requestStatus: {
           type: String,
           default: 'pending'
