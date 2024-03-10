@@ -70,7 +70,7 @@ STRIPE_SECRET_KEY= stripe secret key
 
 ### API Endpoints
 
-Here's list of mostly used API endpoints:
+Examples of API endpoints:
 
 - `POST /api/v1/blogs`: Post a new blog.
 - `GET /api/v1/dietplan/:email`: Query diet plan via user email.
@@ -90,63 +90,31 @@ Here's list of mostly used API endpoints:
 
 ## Database Schema
 
-Here's a list of mostly used schema's:
+Examples of Schema's:
 
 - Users
- fname: {
-    type: String,
-  },
-  lname: {
-    type: String,
-  },
-  email: {
-    type: String,
-    unique: true,
-  },
-  userImage: {
-    type: String,
-  },
-  role:{
-    type: String
-  },
-  watchHistory: {
-    type: [
-      {
-        videoId: String,
-      },
-    ],
-  },
-  saved_blogs: [String],
-  friendList: [
-    {
-      targetId: String,
-      userEmail: String,
-      userName: String,
-      userImage: String,
-      requestStatus: {
-          type: String,
-          default: 'pending'
-      },
-      seenStatus: {
-          type: Boolean,
-          default: false
-      }
-  }
-  ]
+  - fname 
+  - lname
+  - email
+  - userImage
+  - role
+  - watchHistory (array of module videos)
+  - saved_blogs (array of strings)
+  - friendList (array of friends) 
+   
 
-- Workouts
-  - _id
-  - userId (reference to Users)
-  - title
-  - description
-  - date
-  - exercises (array of exercise objects)
+- Trainers
+   - name
+   - age
+   - gender
+   - specialization
+   - experience_years
+   - email
+   - phone
+   - location
+   - bio
+   - profile_image
 
-- Exercises
-  - _id
-  - name
-  - description
-  - category
 
 
 
@@ -162,4 +130,9 @@ If you'd like to contribute to the project, please follow the steps below:
 
 ## Acknowledgements
 
-- Mention any libraries, frameworks, or tools used and give credit to their authors.
+- [Express.js](https://expressjs.com/)
+- [Node.js](https://nodejs.org/en)
+- [Stripe payment gateway](https://stripe.com/?utm_campaign=US_en_Search_Brand_Stripe_EXA-20839462206&utm_medium=cpc&utm_source=google&ad_content=683853401230&utm_term=stripe&utm_matchtype=e&utm_adposition=&utm_device=c&gad_source=1&gclid=CjwKCAiA0bWvBhBjEiwAtEsoW8T68WFtLRKKjo8sej9DKXAMAzgPoaBDNRU8nft8yfVOrVMhEy5o5RoCctIQAvD_BwE)
+- [Mongoose](https://mongoosejs.com/docs/guide.html)
+- [MongoDB](https://www.mongodb.com/)
+
