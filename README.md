@@ -59,12 +59,12 @@ Make sure you have the following installed:
 1. Create a `.env` file in the root directory with the following content:
 
    ```env
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/fitness_app
-   JWT_SECRET=yourSecretKey
-   ```
+  dbURI ="Mongodb URL"
+emailpass =Emaill Pass for nodemailer
+siteemail=Your official emaill address
+STRIPE_SECRET_KEY=stripe secret key
 
-   Adjust the values according to your preferences.
+   ```
 
 ## Usage
 
@@ -72,53 +72,21 @@ Make sure you have the following installed:
 
 Our API provides the following endpoints:
 
-- `POST /api/auth/register`: Register a new user.
-- `POST /api/auth/login`: Authenticate and receive an access token.
-- `GET /api/profile`: Retrieve user profile information.
-- `POST /api/workouts`: Create a new workout.
-- `GET /api/workouts`: Retrieve all workouts.
-- `GET /api/workouts/:id`: Retrieve a specific workout.
-- `PUT /api/workouts/:id`: Update a specific workout.
-- `DELETE /api/workouts/:id`: Delete a specific workout.
+- `POST /api/v1/blogs`: Post a new blog.
+- `GET /api/v1/dietplan/:email`: Query diet plan via user email.
+- `GET /api/v1/all-blogs`: Retrieve all blogs.
+- `GET /api/v1/blog/:id`: Get a speficic blog.
+- `GET /api/v1/challenges`: Get all the challenges.
+- `GET /api/v1/services`: Retrieve all services.
+- `GET /api/v1/service/:id`: Retrieve a specific service.
+- `POST /api/v1/postuserreview`: Create a new review.
+- `DELETE /api/v1/comment-delete`: Delete a specific blog comment.
 - `POST /api/exercises`: Create a new exercise.
-- `GET /api/exercises`: Retrieve all exercises.
-- `GET /api/exercises/:id`: Retrieve a specific exercise.
-- `PUT /api/exercises/:id`: Update a specific exercise.
-- `DELETE /api/exercises/:id`: Delete a specific exercise.
+- `GET /api/v1/users`: Retrieve all users.
+- `GET /api/v1/singleuser`: Retrieve a specific user with email query.
+- `PATCH /api/v1/userFriendUpdate`: Update a specific users friend list, filteration via user id.
+- `PATCH /api/v1/bookMark/:id`: Update a specific users blog bookmark with email query.
 
-### Authentication
-
-To access protected routes, include the JWT token in the Authorization header:
-
-```http
-Authorization: Bearer YOUR_ACCESS_TOKEN
-```
-
-### Sample Requests
-
-#### Register a new user:
-
-```http
-POST /api/auth/register
-Content-Type: application/json
-
-{
-  "username": "john_doe",
-  "password": "securepassword"
-}
-```
-
-#### Log in and get an access token:
-
-```http
-POST /api/auth/login
-Content-Type: application/json
-
-{
-  "username": "john_doe",
-  "password": "securepassword"
-}
-```
 
 ## Database Schema
 
@@ -147,11 +115,13 @@ We use MongoDB with the following schema:
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+If you'd like to contribute to the project, please follow the steps below:
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add new feature'`.
+4. Push to the branch: `git push origin feature-name`.
+5. Submit a pull request.
 
 ## Acknowledgements
 
