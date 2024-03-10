@@ -58,19 +58,19 @@ Make sure you have the following installed:
 
 1. Create a `.env` file in the root directory with the following content:
 
-   ```env
-  dbURI ="Mongodb URL"
-emailpass =Emaill Pass for nodemailer
-siteemail=Your official emaill address
-STRIPE_SECRET_KEY=stripe secret key
+```env
+dbURI = Mongodb URL
+emailpass = Emaill Pass for nodemailer
+siteemail= Your official emaill address
+STRIPE_SECRET_KEY= stripe secret key
 
-   ```
+```
 
 ## Usage
 
 ### API Endpoints
 
-Our API provides the following endpoints:
+Here's list of mostly used API endpoints:
 
 - `POST /api/v1/blogs`: Post a new blog.
 - `GET /api/v1/dietplan/:email`: Query diet plan via user email.
@@ -90,12 +90,49 @@ Our API provides the following endpoints:
 
 ## Database Schema
 
-We use MongoDB with the following schema:
+Here's a list of mostly used schema's:
 
 - Users
-  - _id
-  - username
-  - password (hashed)
+ fname: {
+    type: String,
+  },
+  lname: {
+    type: String,
+  },
+  email: {
+    type: String,
+    unique: true,
+  },
+  userImage: {
+    type: String,
+  },
+  role:{
+    type: String
+  },
+  watchHistory: {
+    type: [
+      {
+        videoId: String,
+      },
+    ],
+  },
+  saved_blogs: [String],
+  friendList: [
+    {
+      targetId: String,
+      userEmail: String,
+      userName: String,
+      userImage: String,
+      requestStatus: {
+          type: String,
+          default: 'pending'
+      },
+      seenStatus: {
+          type: Boolean,
+          default: false
+      }
+  }
+  ]
 
 - Workouts
   - _id
