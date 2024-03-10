@@ -1,4 +1,4 @@
----
+----
 
 # FitTrack Application Backend
 
@@ -22,14 +22,13 @@
 
 ## Introduction
 
-Welcome to the backend repository of our Fitness Tracking Application. This backend is built using Mongoose, Express, Node.js, and MongoDB, providing a robust and scalable foundation for our fitness tracking features.
+Welcome to the backend repository of our FitTrack Application. This backend is built using Mongoose, Express, Node.js, and MongoDB, providing a robust and scalable foundation for our fitness tracking features.
 
 ## Features
 
 - User authentication and authorization
-- CRUD operations for user profiles, workouts, and exercises
+- CRUD operations for blogs, workout challenges, modules, users friend list, and trainers.
 - Data validation and error handling
-- Token-based authentication for secure API access
 
 ## Getting Started
 
@@ -45,8 +44,8 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/fitness-tracking-backend.git
-   cd fitness-tracking-backend
+   git clone https://github.com/justJubair/fit-track-server.git
+   cd fit-track-server
    ```
 
 2. Install dependencies:
@@ -157,5 +156,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgements
 
 - Mention any libraries, frameworks, or tools used and give credit to their authors.
-
----
