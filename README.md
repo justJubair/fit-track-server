@@ -12,12 +12,8 @@
   - [Configuration](#configuration)
 - [Usage](#usage)
   - [API Endpoints](#api-endpoints)
-  - [Authentication](#authentication)
-  - [Sample Requests](#sample-requests)
 - [Database Schema](#database-schema)
-- [Testing](#testing)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
